@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+}
+.titlebar {
+  height: 30px;
+  background: linear-gradient(to bottom, #3b3f46 0%, #2b2e33 100%);
+  color: white;
+  display: flex;
+  padding: 0 10px;
+  justify-content: start;
+  align-items: center;
+  /* app-region: drag; */
+}
+/* 在最右边 */
+.titlebar .titlebar-button{
+  margin-left: auto;
+  background: none;
+  color: white;
+  cursor: pointer;
+  padding: 0 10px;
+}
+.titlebar #minimize-button, .titlebar #maximize-button, .titlebar #close-button {
+  color: white;
+  -webkit-app-region: no-drag;
+  background: transparent;
+  border: 1px solid red;
+  cursor: pointer;  
+}
