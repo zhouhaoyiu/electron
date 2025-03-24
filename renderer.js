@@ -5,6 +5,12 @@ const func = async () => {
     document.getElementById('close-button').addEventListener('click', () => {
       window.versions.closeApp()
     });
+    document.getElementById('minimize-button').addEventListener('click', () => {
+      window.versions.minimizeApp()
+    });
+    document.getElementById('maximize-button').addEventListener('click', () => {
+      window.versions.maximizeApp()
+    });
   }
   
   func()
