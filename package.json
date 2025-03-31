@@ -19,6 +19,7 @@
     ]
   },
   "dependencies": {
-    "my-electron-app": "file:"
+    "my-electron-app": "file:",
+    "vue": "^3.5.13"
   }
 }
