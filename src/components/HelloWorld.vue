@@ -1,34 +1,21 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
-defineProps<{ msg: string }>()
 
-const count = ref(0)
+const router = useRouter()
+
+function switchRouter(name: string) {
+  router.push({ name })
+}
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
 
   <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
-  </div>
+    <button type="button" @click="switchRouter('Home')">switch to Home</button>
 
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+    <button type="button" @click="switchRouter('About')">switch to About</button>
+  </div>
 </template>
 
 <style scoped>

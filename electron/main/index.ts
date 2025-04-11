@@ -102,6 +102,13 @@ app.on('activate', () => {
   }
 })
 
+// handler router switch
+ipcMain.handle('switch-router', (_, arg) => {
+  if (win) {
+    win.webContents.send('switch-router', arg)
+  }
+})
+
 // New window example arg: new windows url
 ipcMain.handle('open-win', (_, arg) => {
   const childWindow = new BrowserWindow({
