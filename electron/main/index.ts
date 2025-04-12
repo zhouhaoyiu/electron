@@ -60,7 +60,7 @@ async function createWindow() {
   if (VITE_DEV_SERVER_URL) { // #298
     win.loadURL(VITE_DEV_SERVER_URL)
     // Open devTool if the app is not packaged
-    win.webContents.openDevTools()
+    // win.webContents.openDevTools()
   } else {
     win.loadFile(indexHtml)
   }
@@ -99,13 +99,6 @@ app.on('activate', () => {
     allWindows[0].focus()
   } else {
     createWindow()
-  }
-})
-
-// handler router switch
-ipcMain.handle('switch-router', (_, arg) => {
-  if (win) {
-    win.webContents.send('switch-router', arg)
   }
 })
 
